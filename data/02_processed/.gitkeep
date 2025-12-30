@@ -1,0 +1,10 @@
+# Processed data files will be generated here after running preprocessing notebook
+
+Generated files:
+- train_processed.csv
+- test_processed.csv
+- val_processed.csv
+- X_train.csv / X_train.npy
+- X_val.csv / X_val.npy
+- y_train.csv / y_train.npy
+- y_val.csv / y_val.npy

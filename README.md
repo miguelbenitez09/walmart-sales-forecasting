@@ -596,12 +596,28 @@ cd web
 pip install -r requirements.txt
 ```
 
-#### 4. Descargar Datos
-Los datos están incluidos en el repositorio en `data/01_raw/`. Si necesitas descargarlos nuevamente:
+#### 4. Descargar Datos desde Kaggle
+
+**⚠️ Los archivos CSV NO están incluidos en el repositorio debido a su tamaño.**
+
+**Opción A: Descargar manualmente**
+1. Ir a: https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting
+2. Descargar todos los archivos
+3. Colocar en `data/01_raw/`:
+   - train.csv
+   - test.csv
+   - features.csv
+   - stores.csv
+   - sampleSubmission.csv
+
+**Opción B: Usar Kaggle API**
 ```bash
-# Descargar desde Kaggle
-# Requiere kaggle API configurada
-kaggle competitions download -c walmart-recruiting-store-sales-forecasting
+# Instalar Kaggle CLI
+pip install kaggle
+
+# Configurar credenciales (kaggle.json en ~/.kaggle/)
+kaggle competitions download -c walmart-recruiting-store-sales-forecasting -p data/01_raw/
+unzip data/01_raw/walmart-recruiting-store-sales-forecasting.zip -d data/01_raw/
 ```
 
 ---

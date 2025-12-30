@@ -1,0 +1,9 @@
+# Raw data files go here
+# Download from Kaggle: https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting
+
+Required files:
+- train.csv
+- test.csv
+- features.csv
+- stores.csv
+- sampleSubmission.csv
