@@ -645,6 +645,43 @@ docker-compose down
 
 ## 💻 Uso
 
+### ⚠️ IMPORTANTE: Entrenar Modelos Primero
+
+**Los modelos pre-entrenados NO están incluidos en el repositorio debido a su gran tamaño (~3GB)**. Debes entrenarlos localmente antes de usar la API o el dashboard.
+
+#### Opción A: Entrenar con Notebooks (Recomendado)
+```bash
+# 1. Activar entorno virtual
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+
+# 2. Instalar dependencias
+pip install pandas numpy scikit-learn xgboost lightgbm matplotlib seaborn plotly jupyter
+
+# 3. Iniciar Jupyter y ejecutar notebooks en orden:
+jupyter notebook
+
+# Notebooks a ejecutar:
+# ├── 01_exploracion_dataset.ipynb     (Análisis exploratorio)
+# ├── 02_preprocesamiento_dataset.ipynb (Limpieza y transformación)
+# └── 03_modelado_dataset.ipynb        (ENTRENAMIENTO DE MODELOS) ⭐
+```
+
+**El notebook `03_modelado_dataset.ipynb` guardará automáticamente los modelos en `models/`**:
+- `best_model.pkl` - Modelo principal para predicciones
+- `best_model_compressed.pkl` - Versión optimizada
+- `model_info.pkl` - Metadatos del modelo
+
+#### Opción B: Script de Entrenamiento Rápido
+```bash
+cd notebooks
+python execute_modelado.py
+```
+
+Este script ejecutará todo el pipeline de entrenamiento automáticamente (~30-45 minutos dependiendo de tu hardware).
+
+---
+
 ### 1. Ejecutar Notebooks de Análisis
 
 ```bash

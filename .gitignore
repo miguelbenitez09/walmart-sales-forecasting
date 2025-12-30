@@ -46,7 +46,7 @@ Thumbs.db
 data/01_raw/*.csv
 data/02_processed/*.csv
 
-# Models (archivos grandes)
+# Models (archivos grandes - usuarios deben entrenar localmente)
 models/*.pkl
 !models/.gitkeep
 
