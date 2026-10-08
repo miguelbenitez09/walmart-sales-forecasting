@@ -91,16 +91,20 @@ Walmart necesita optimizar su cadena de suministro y operaciones mediante la pre
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset y Régimen de Acceso Abierto
 
-**Fuente**: [Walmart Recruiting - Store Sales Forecasting (Kaggle)](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
+**Fuente Oficial**: [Walmart Recruiting - Store Sales Forecasting (Kaggle Benchmark)](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)  
+**Régimen de Licenciamiento**: Acceso Abierto para Investigación Científica, Educación y Benchmarking Competitivo.
+
+### Política de Higiene de Repositorio (Zero Raw Bloat)
+Para mantener este repositorio ágil, profesional y listo para despliegues en contenedores Docker sin almacenar cientos de megabytes en el historial de Git, **los datos crudos masivos están desacoplados del control de versiones**. El repositorio contiene el pipeline modular determinístico (`data/`, `notebooks/`, `api/`) que permite reproducir la descarga, transformación, entrenamiento y serving desde cero.
 
 ### Información General
 - **Período**: Febrero 2010 - Octubre 2012
 - **Granularidad**: Semanal
-- **Registros Entrenamiento**: 421,570
-- **Tiendas**: 45
-- **Departamentos**: 81
+- **Registros Entrenamiento**: 421,570 observaciones
+- **Entidades Modeladas**: 45 tiendas × 81 departamentos
+- **Estrategia de Tratamiento**: Fusión relacional por `(Store, Date)`, imputación con ceros en `MarkDown1-5` (ausencia de promoción activa) y particionamiento temporal cronológico sin mezcla aleatoria para evitar cualquier fuga de información (*zero lookahead bias*).
 
 ### Archivos
 
