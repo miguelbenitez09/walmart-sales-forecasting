@@ -42,9 +42,16 @@
 
 ---
 
-## 🎯 Descripción del Proyecto
+## 🎯 Descripción del Proyecto y Enfoque Académico UTP
 
-Este proyecto implementa un sistema completo de predicción de ventas para Walmart, abarcando todo el pipeline de Data Science desde la exploración inicial hasta el despliegue en producción.
+Este proyecto constituye un **pipeline fundacional de extremo a extremo (E2E MLOps Lifecycle)** desarrollado para consolidar y demostrar las competencias troncales adquiridas durante la carrera de **Ingeniería en Sistemas y Computación en la Universidad Tecnológica de Panamá (UTP)**. 
+
+Su propósito central es ejemplificar la ejecución rigurosa, limpia y reproducible de cada una de las fases esenciales en la resolución de problemas mediante Inteligencia Artificial aplicada:
+1. **Ingesta y Validación de Datos:** Fusión relacional de tiendas, características macroeconómicas y ventas semanales.
+2. **Análisis Exploratorio de Datos (EDA):** Detección de patrones de estacionalidad, correlaciones y dispersión.
+3. **Ingeniería de Características:** Extracción de rezagos temporales (*lags*), variables cíclicas y tratamiento de descuentos (*MarkDown1-5*).
+4. **Modelado y Benchmarking:** Evaluación comparativa con la métrica oficial de negocio **WMAE** (*Weighted Mean Absolute Error*).
+5. **Ingeniería de Software para Despliegue:** Exposición como microservicio REST OpenAPI con FastAPI, contenedorización y dashboard interactivo en Streamlit.
 
 ### Objetivo Principal
 Predecir las ventas semanales (`Weekly_Sales`) de diferentes departamentos en 45 tiendas Walmart, considerando factores como:
@@ -56,7 +63,7 @@ Predecir las ventas semanales (`Weekly_Sales`) de diferentes departamentos en 45
 
 ### Pipeline Completo
 ```
-Datos Crudos → EDA → Feature Engineering → Modelado ML → API REST → Dashboard Web
+Datos Crudos → EDA → Feature Engineering → Modelado ML (WMAE) → API REST → Dashboard Web
 ```
 
 ---
