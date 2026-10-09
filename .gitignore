@@ -42,9 +42,11 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Data (archivos grandes no se suben a GitHub)
+# Data (archivos grandes no se suben a GitHub - Politica Zero Raw Bloat)
 data/01_raw/*.csv
 data/02_processed/*.csv
+data/02_processed/*.npy
+data/**/*.npy
 
 # Models (archivos grandes - usuarios deben entrenar localmente)
 models/*.pkl
